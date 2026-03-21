@@ -1,0 +1,1 @@
+print("Booooo, is it scary?")
