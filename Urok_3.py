@@ -1,5 +1,5 @@
 import random
-from selectors import SelectSelector
+
 
 
 class Human:
