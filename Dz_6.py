@@ -9,14 +9,14 @@ def divider(a, b):
         raise IndexError("b більше 100")
     return a/b
 
-data = {10: 2, 2: 5, "123": 4, 18: 0, 0: 15, 8 : 4}
+data = {10: 2, 2: 5, "123": 4, 18: 0, 0: 15, 8: 4}
 for key in data:
     try:
         res = divider(key, data[key])
         result.append(res)
     except ZeroDivisionError:
-        print("Ділення на нуль!")
+        print("Тип виключення: ZeroDivisionError: Сповіщення: Ділення на нуль!")
     except Exception as e:
-        print(f"Тип виключення: {type(e).__name__}: \nСповіщення: {e} ")
+        print(f"Тип виключення: {type(e).__name__}: Сповіщення: {e} ")
 
 print("\nРезультат: ", result)
