@@ -6,7 +6,7 @@ headers = {"User-Agent": "Mozilla/5.0"}
 resource = requests.get(url, headers=headers)
 soup = BeautifulSoup(resource.text, "html.parser")
 title = soup.find("h1").text
-print("Назва статті: ", title)
+print("Назва статті:", title)
 
 paragraph = soup.find("p").text
 print(paragraph)
@@ -16,7 +16,7 @@ for s in sections:
     print(s.text)
 
 links = soup.find_all("a")
-print("Кількість посилань: ", len(links))
+print("Кількість посилань:", len(links))
 
 for link in links:
     href = link.get("href")
