@@ -48,7 +48,7 @@ def get_temperature():
     response = requests.get(url)
 
     if response.status_code != 200:
-        raise Exception("Помилка API")
+        raise Exception("Помилка заходу на сайт")
 
     data = response.json()
 
