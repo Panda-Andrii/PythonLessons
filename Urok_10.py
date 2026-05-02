@@ -3,7 +3,7 @@ import sqlite3
 # Створення бази та таблиць
 conn = sqlite3.connect("v2222.db")
 cur = conn.cursor()
-'''
+
 cur.execute("""
 CREATE TABLE IF NOT EXISTS Students (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,7 +32,6 @@ students = cur.fetchall()
 
 for s in students:
     print(s)
-'''
 
 cur.execute("SELECT name FROM Students;")
 students = cur.fetchall()
